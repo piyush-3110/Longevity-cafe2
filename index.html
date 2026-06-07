@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Longevity Cafe — Premium Himalayan coffee crafted for clarity, focus, and everyday rituals."
+    />
+    <title>Longevity Cafe — Coffee for a Longer Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__inner">
+        <span class="loader__word">Longevity</span>
+        <span class="loader__line"></span>
+      </div>
+    </div>
+
+    <svg class="hero__clip-def" aria-hidden="true" width="0" height="0">
+      <defs>
+        <clipPath id="hero-organic-clip" clipPathUnits="objectBoundingBox">
+          <path
+            d="M 0.06 0.01 C 0.2 0 0.36 0.03 0.5 0.1 C 0.66 0.2 0.82 0.36 0.94 0.52 C 1 0.68 1 0.86 0.96 0.98 C 0.88 1 0.7 1 0.52 0.98 C 0.32 0.94 0.16 0.86 0.06 0.7 C 0 0.52 0 0.26 0.06 0.01 Z"
+          />
+        </clipPath>
+        <clipPath id="hero-mobile-clip" clipPathUnits="objectBoundingBox">
+          <ellipse cx="0.5" cy="0.45" rx="0.48" ry="0.46" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <header class="nav">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">Longevity Cafe</a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#origin" class="nav__link">Origin</a>
+          <a href="#products" class="nav__link">Coffee</a>
+          <a href="#process" class="nav__link">Process</a>
+          <a href="#cafe" class="nav__link">Cafe</a>
+        </nav>
+        <a href="#products" class="nav__cta btn-magnetic">
+          <span class="btn-magnetic__inner">Shop Coffee</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECTION 1 — HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__bg-gradient"></div>
+          <div class="hero__bg-grain"></div>
+        </div>
+
+        <div class="hero__bloom" aria-hidden="true"></div>
+
+        <div class="hero__stage">
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              Mountain-Grown &bull; Small-Batch &bull; Himalayan Coffee
+            </p>
+            <h1 class="hero__title">
+              <span class="hero__line"><span>Crafted in the</span></span>
+              <span class="hero__line"><span>Himalayas</span></span>
+            </h1>
+            <p class="hero__desc">
+              Harvested in the highlands of Nepal and roasted with precision to create coffee
+              that inspires focus, ritual, and longevity.
+            </p>
+            <div class="hero__actions">
+              <a href="#products" class="btn btn--primary btn-magnetic">
+                <span class="btn-magnetic__inner">Shop Coffee</span>
+              </a>
+              <a href="#origin" class="btn btn--ghost btn-magnetic">
+                <span class="btn-magnetic__inner">Explore Our Story</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="hero__mask">
+              <div class="hero__mask-inner">
+                <div class="hero__image-layer">
+                  <img
+                    src="/images/hero.jpg"
+                    alt="Premium coffee cup with warm morning light"
+                    class="hero__image"
+                    width="900"
+                    height="1100"
+                  />
+                  <div class="hero__light-shift" aria-hidden="true"></div>
+                  <div class="hero__steam" aria-hidden="true">
+                    <span class="hero__steam-wisp"></span>
+                    <span class="hero__steam-wisp"></span>
+                    <span class="hero__steam-wisp"></span>
+                  </div>
+                  <div class="hero__image-shadow" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__beans" aria-hidden="true">
+              <span class="hero__bean hero__bean--1"></span>
+              <span class="hero__bean hero__bean--2"></span>
+              <span class="hero__bean hero__bean--3"></span>
+              <span class="hero__bean hero__bean--4"></span>
+              <span class="hero__bean hero__bean--5"></span>
+              <span class="hero__bean hero__bean--6"></span>
+            </div>
+
+            <div class="hero__badge">&#127475;&#127477; Nepal Himalayas</div>
+
+            <div class="hero__card hero__card--altitude">
+              <span class="hero__card-label">Altitude</span>
+              <span class="hero__card-value">1800m+</span>
+            </div>
+
+            <div class="hero__card hero__card--batch">
+              <span class="hero__card-label">Single Origin</span>
+              <span class="hero__card-value">Small Batch</span>
+            </div>
+
+            <a href="#origin" class="hero__origin-pill">
+              <span class="hero__origin-thumb" aria-hidden="true"></span>
+              <span class="hero__origin-copy">
+                <span class="hero__origin-title">From the Himalayas</span>
+                <span class="hero__origin-sub">Pure origins</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__scroll">
+          <span class="hero__scroll-text">Scroll to Discover</span>
+          <div class="hero__scroll-line"><span></span></div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 — ORIGIN -->
+      <section class="origin section--white" id="origin">
+        <div class="origin__grid">
+          <div class="origin__visual reveal-mask">
+            <div class="origin__mask">
+              <img
+                src="/images/origin.jpg"
+                alt="Himalayan mountain landscape at dawn"
+                class="origin__image"
+                width="720"
+                height="900"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="origin__content">
+            <span class="section-label">Our Origin</span>
+            <h2 class="section-title origin__title">From the Himalayas</h2>
+            <div class="origin__text">
+              <p>
+                High in the Nepalese mountains, where thin air and ancient soil converge,
+                our coffee grows slowly — developing depth, nuance, and a clarity that
+                lowland beans cannot replicate.
+              </p>
+              <p>
+                Each harvest is hand-picked at peak ripeness, sun-dried on elevated terraces,
+                and roasted with restraint to preserve the terroir. This is coffee with
+                altitude in every cup.
+              </p>
+            </div>
+            <a href="#process" class="link-underline">Discover our process</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 — WHY LONGEVITY -->
+      <section class="benefits" id="benefits">
+        <div class="benefits__header">
+          <span class="section-label">Why Longevity</span>
+          <h2 class="section-title">Crafted for how you live</h2>
+          <p class="benefits__intro">
+            Every blend is designed around the rituals that sustain focus, energy, and wellbeing.
+          </p>
+        </div>
+        <div class="benefits__cards">
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2" />
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Focus</h3>
+            <p class="benefit-card__desc">
+              Clean, sustained clarity without the crash. Ideal for deep work and morning intention.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Energy</h3>
+            <p class="benefit-card__desc">
+              Balanced natural caffeine from high-altitude arabica. Vitality that feels earned, not forced.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" />
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Wellbeing</h3>
+            <p class="benefit-card__desc">
+              Antioxidant-rich, ethically sourced, and roasted to support a slower, more considered life.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 4 — FEATURED COFFEE -->
+      <section class="products section--white" id="products">
+        <div class="products__header">
+          <span class="section-label">Featured Coffee</span>
+          <h2 class="section-title">The Collection</h2>
+        </div>
+        <div class="products__grid">
+          <article class="product-card">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrap">
+                <img
+                  src="/images/product-himalayan.jpg"
+                  alt="Himalayan Reserve coffee packaging"
+                  class="product-card__image"
+                  width="480"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Himalayan Reserve</h3>
+                <p class="product-card__note">Single origin · Dark roast</p>
+                <!-- <p class="product-card__price">$38</p> -->
+              </div>
+            </a>
+          </article>
+          <article class="product-card">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrap">
+                <img
+                  src="/images/product-morning.jpg"
+                  alt="Morning Ritual Blend coffee"
+                  class="product-card__image"
+                  width="480"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Morning Ritual Blend</h3>
+                <p class="product-card__note">Daily blend · Medium roast</p>
+                <!-- <p class="product-card__price">$32</p> -->
+              </div>
+            </a>
+          </article>
+          <article class="product-card">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrap">
+                <img
+                  src="/images/product-peak.jpg"
+                  alt="Peak Roast coffee beans"
+                  class="product-card__image"
+                  width="480"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Peak Roast</h3>
+                <p class="product-card__note">Limited edition · Light roast</p>
+                <!-- <p class="product-card__price">$42</p> -->
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 5 — THE PROCESS -->
+      <section class="process" id="process">
+        <div class="process__header">
+          <span class="section-label">The Process</span>
+          <h2 class="section-title">From mountain to cup</h2>
+        </div>
+        <div class="process__timeline">
+          <div class="process__line-wrap" aria-hidden="true">
+            <svg class="process__line-svg" viewBox="0 0 1000 4" preserveAspectRatio="none">
+              <line class="process__line-bg" x1="0" y1="2" x2="1000" y2="2" />
+              <line class="process__line-fill" x1="0" y1="2" x2="1000" y2="2" />
+            </svg>
+          </div>
+          <div class="process__steps">
+            <article class="process-step">
+              <span class="process-step__num">01</span>
+              <h3 class="process-step__title">Mountain Farms</h3>
+              <p class="process-step__desc">
+                Shade-grown arabica at 1,800 metres, tended by generational farmers.
+              </p>
+            </article>
+            <article class="process-step">
+              <span class="process-step__num">02</span>
+              <h3 class="process-step__title">Harvest</h3>
+              <p class="process-step__desc">
+                Selective hand-picking at peak ripeness, sorted within hours of collection.
+              </p>
+            </article>
+            <article class="process-step">
+              <span class="process-step__num">03</span>
+              <h3 class="process-step__title">Roast</h3>
+              <p class="process-step__desc">
+                Small-batch roasting in Kathmandu, calibrated to each origin's character.
+              </p>
+            </article>
+            <article class="process-step">
+              <span class="process-step__num">04</span>
+              <h3 class="process-step__title">Enjoy</h3>
+              <p class="process-step__desc">
+                Delivered fresh at peak flavour, ready for your daily ritual at home or in our cafe.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6 — CUSTOMER EXPERIENCE -->
+      <section class="testimonial section--white" id="testimonial">
+        <div class="testimonial__grid">
+          <div class="testimonial__content">
+            <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="testimonial__quote">
+              <p>
+                Longevity Cafe changed how I start my mornings. The clarity is unmistakable —
+                no jitters, no crash. Just a quiet, sustained focus that carries through the day.
+              </p>
+            </blockquote>
+            <footer class="testimonial__author">
+              <cite class="testimonial__name">Elena Whitmore</cite>
+              <span class="testimonial__role">Creative Director, London</span>
+            </footer>
+          </div>
+          <div class="testimonial__visual">
+            <img
+              src="/images/testimonial.jpg"
+              alt="Woman enjoying coffee in a bright cafe"
+              class="testimonial__image"
+              width="560"
+              height="680"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7 — CAFE EXPERIENCE -->
+      <section class="cafe" id="cafe">
+        <div class="cafe__header">
+          <span class="section-label">The Cafe</span>
+          <h2 class="section-title">A space for slow living</h2>
+          <p class="cafe__intro">
+            Natural materials, soft light, and the calm of a beautifully considered space.
+          </p>
+        </div>
+        <div class="cafe__masonry">
+          <div class="cafe__item cafe__item--tall parallax-item">
+            <img
+              src="/images/cafe-interior.jpg"
+              alt="Minimal cafe interior with natural wood"
+              loading="lazy"
+            />
+          </div>
+          <div class="cafe__item parallax-item">
+            <img
+              src="/images/cafe-barista.jpg"
+              alt="Freshly prepared coffee served in ceramic cups"
+              loading="lazy"
+            />
+          </div>
+          <div class="cafe__item cafe__item--wide parallax-item">
+            <img
+              src="/images/cafe-seating.jpg"
+              alt="Sunlit cafe seating area"
+              loading="lazy"
+            />
+          </div>
+          <div class="cafe__item parallax-item">
+            <img
+              src="/images/cafe-beans.jpg"
+              alt="Roasted Himalayan coffee beans"
+              loading="lazy"
+            />
+          </div>
+          <div class="cafe__item cafe__item--tall parallax-item">
+            <img
+              src="/images/cafe-cups.jpg"
+              alt="Ceramic coffee cups in warm morning light"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8 — NEWSLETTER -->
+      <section class="newsletter section--white" id="newsletter">
+        <div class="newsletter__inner">
+          <span class="section-label">Newsletter</span>
+          <h2 class="section-title newsletter__title">Join the Ritual</h2>
+          <p class="newsletter__subtext">
+            Receive origin stories, tasting notes, and exclusive releases.
+          </p>
+          <form class="newsletter__form" action="#" method="post">
+            <label for="email" class="visually-hidden">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email address"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn btn--primary btn-magnetic">
+              <span class="btn-magnetic__inner">Subscribe</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- SECTION 9 — FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">Longevity Cafe</span>
+          <p class="footer__tagline">Coffee designed for a better life.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__col">
+            <span class="footer__heading">Shop</span>
+            <a href="#products" class="footer__link">All Coffee</a>
+            <a href="#" class="footer__link">Subscriptions</a>
+            <a href="#" class="footer__link">Gift Sets</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__heading">About</span>
+            <a href="#origin" class="footer__link">Our Story</a>
+            <a href="#process" class="footer__link">Process</a>
+            <a href="#cafe" class="footer__link">Visit Us</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__heading">Connect</span>
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">Newsletter</a>
+            <a href="#" class="footer__link">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Longevity Cafe. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
