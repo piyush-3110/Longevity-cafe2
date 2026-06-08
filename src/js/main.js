@@ -24,21 +24,21 @@ function initNav() {
   ScrollTrigger.addEventListener('refreshInit', syncNavScrolled);
 
   if (toggle && mobile) {
-    toggle.addEventListener('click', () => {
-      const open = mobile.hasAttribute('hidden');
-      mobile.toggleAttribute('hidden', !open);
+    const setMenuOpen = (open) => {
       nav.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
+      mobile.setAttribute('aria-hidden', String(!open));
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
+    toggle.addEventListener('click', () => {
+      setMenuOpen(mobile.getAttribute('aria-hidden') === 'true');
     });
 
     mobile.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        mobile.setAttribute('hidden', '');
-        nav.classList.remove('is-open');
-        document.body.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
+        setMenuOpen(false);
       });
     });
   }
@@ -97,7 +97,7 @@ function initScrollReveals() {
 }
 
 function initImageReveals() {
-  gsap.utils.toArray('.about__img img, .gallery__item img').forEach((img) => {
+  gsap.utils.toArray('.about__img img, .gallery__item img, .packaging__visual img').forEach((img) => {
     gsap.from(img, {
       scale: 1.15,
       duration: 1.4,

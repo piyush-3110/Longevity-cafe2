@@ -28,11 +28,11 @@
           <a href="#experience" class="nav__link">Experience</a>
           <a href="#contact" class="nav__link">Contact</a>
         </nav>
-        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
           <span></span><span></span><span></span>
         </button>
       </div>
-      <div class="nav__mobile" hidden>
+      <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
         <a href="#about">Our Story</a>
         <a href="#products">Products</a>
         <a href="#gallery">Gallery</a>
@@ -211,6 +211,40 @@
                 <p>Packaged coffee, teas, snacks, nuts, blends, and selected wellness products to take the experience home.</p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PACKAGING DESIGN -->
+      <section class="packaging" id="packaging">
+        <div class="container">
+          <div class="packaging__grid">
+            <div class="packaging__visual" data-reveal>
+              <img
+                src="/images/poductdesign.png"
+                alt="Longevity Café Himalayan Coffee packaging design"
+                loading="lazy"
+              />
+            </div>
+            <div class="packaging__copy" data-reveal>
+              <span class="label">Brand Design</span>
+              <h2 class="heading-2">Where Mountains<br />Meet the Cup</h2>
+              <p>
+                Every detail of our Himalayan Coffee packaging reflects the landscape it comes from —
+                snow-capped peaks, alpine forests, and the golden light of high altitude mornings.
+                Designed to feel as premium as the coffee inside.
+              </p>
+              <ul class="packaging__features">
+                <li>Single Origin — Nepal Himalaya</li>
+                <li>100% Arabica Whole Bean Coffee</li>
+                <li>High Altitude Grown (1,200–1,800 MASL)</li>
+                <li>Ethically Sourced &amp; Sustainably Farmed</li>
+              </ul>
+              <p class="packaging__notes">
+                <strong>Tasting Notes</strong> — Dark Chocolate · Caramel · Citrus · Floral Finish
+              </p>
+              <a href="#contact" class="btn btn--primary">Product Inquiry</a>
+            </div>
           </div>
         </div>
       </section>
