@@ -10,15 +10,25 @@ function initNav() {
   const toggle = document.querySelector('.nav__toggle');
   const mobile = document.querySelector('.nav__mobile');
 
+  const syncNavScrolled = () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+
+  syncNavScrolled();
+
   ScrollTrigger.create({
     start: 'top -80',
     onUpdate: (self) => nav.classList.toggle('is-scrolled', self.scroll() > 40),
   });
 
+  ScrollTrigger.addEventListener('refreshInit', syncNavScrolled);
+
   if (toggle && mobile) {
     toggle.addEventListener('click', () => {
       const open = mobile.hasAttribute('hidden');
       mobile.toggleAttribute('hidden', !open);
+      nav.classList.toggle('is-open', open);
+      document.body.classList.toggle('nav-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
@@ -26,6 +36,8 @@ function initNav() {
     mobile.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         mobile.setAttribute('hidden', '');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
         toggle.setAttribute('aria-expanded', 'false');
       });
     });

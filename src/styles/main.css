@@ -202,7 +202,37 @@ button {
   box-shadow: 0 1px 0 var(--stone-light);
 }
 
+@media (max-width: 899px) {
+  .nav {
+    transition: padding 0.4s;
+  }
+
+  .nav.is-scrolled {
+    background: var(--bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+.nav.is-open {
+  background: var(--bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.nav.is-open .nav__logo {
+  color: var(--brown);
+}
+
+.nav.is-open .nav__toggle span {
+  background: var(--brown);
+}
+
 .nav__inner {
+  position: relative;
+  z-index: 103;
   width: var(--container);
   margin: 0 auto;
   display: flex;
@@ -264,7 +294,7 @@ button {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
-  z-index: 101;
+  z-index: 103;
 }
 
 @media (min-width: 900px) {
@@ -289,12 +319,16 @@ button {
   position: fixed;
   inset: 0;
   top: 0;
-  z-index: 99;
+  z-index: 102;
   background: var(--bg);
   padding: 100px 32px 40px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+body.nav-open {
+  overflow: hidden;
 }
 
 .nav__mobile[hidden] {
