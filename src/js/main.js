@@ -54,7 +54,28 @@ function initHero() {
     .from('.hero__line', { y: '110%', duration: 1, stagger: 0.12, ease: 'power4.out' }, 0.4)
     .from('.hero__subtitle', { opacity: 0, y: 24, duration: 0.9 }, 0.9)
     .from('.hero__actions', { opacity: 0, y: 20, duration: 0.8 }, 1.1)
-    .from('.hero__scroll', { opacity: 0, y: 16, duration: 0.7 }, 1.4);
+    .from('.hero__stats', { opacity: 0, y: 20, duration: 0.8 }, 1.25)
+    .from('.hero__side--left', { opacity: 0, x: -24, duration: 1 }, 1.3)
+    .from('.hero__side--right', { opacity: 0, x: 24, duration: 1 }, 1.3)
+    .from('.hero__scroll', { opacity: 0, y: 16, duration: 0.7 }, 1.5);
+
+  gsap.to('.hero__side--left', {
+    y: -10,
+    duration: 3.5,
+    ease: 'sine.inOut',
+    repeat: -1,
+    yoyo: true,
+    delay: 2.5,
+  });
+
+  gsap.to('.hero__side--right', {
+    y: 8,
+    duration: 4,
+    ease: 'sine.inOut',
+    repeat: -1,
+    yoyo: true,
+    delay: 3,
+  });
 
   gsap.to('.hero__scroll-bar span', {
     scaleY: 1,
