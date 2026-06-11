@@ -13,6 +13,7 @@ function initNav() {
   const syncNavScrolled = () => {
     nav.classList.toggle('is-scrolled', window.scrollY > 40);
   };
+  // jnsdfns
 
   syncNavScrolled();
 
