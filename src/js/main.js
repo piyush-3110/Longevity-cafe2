@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { initI18n, t } from './i18n.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,6 @@ function initNav() {
   const syncNavScrolled = () => {
     nav.classList.toggle('is-scrolled', window.scrollY > 40);
   };
-  // jnsdfns
 
   syncNavScrolled();
 
@@ -30,7 +30,7 @@ function initNav() {
       document.body.classList.toggle('nav-open', open);
       mobile.setAttribute('aria-hidden', String(!open));
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.setAttribute('aria-label', t(open ? 'nav.closeMenu' : 'nav.openMenu'));
     };
 
     toggle.addEventListener('click', () => {
@@ -119,7 +119,7 @@ function initScrollReveals() {
 }
 
 function initImageReveals() {
-  gsap.utils.toArray('.about__img img, .gallery__item img, .packaging__visual img').forEach((img) => {
+  gsap.utils.toArray('.about__img img, .gallery__item img, .packaging__visual img, .team-card__photo').forEach((img) => {
     gsap.from(img, {
       scale: 1.15,
       duration: 1.4,
@@ -171,6 +171,17 @@ function initProductHover() {
   });
 }
 
+function initTeamHover() {
+  document.querySelectorAll('.team-card').forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { y: -4, duration: 0.35, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { y: 0, duration: 0.45, ease: 'power2.out' });
+    });
+  });
+}
+
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const messageEl = document.getElementById('form-message');
@@ -194,7 +205,7 @@ function initContactForm() {
     };
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = t('contact.sending');
 
     try {
       const res = await fetch('/api/contact', {
@@ -219,7 +230,7 @@ function initContactForm() {
       messageEl.hidden = false;
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Inquiry';
+      submitBtn.textContent = t('contact.submit');
     }
   });
 }
@@ -234,6 +245,7 @@ function init() {
     (context) => {
       const { reduceMotion } = context.conditions;
 
+      initI18n();
       initNav();
       initContactForm();
 
@@ -245,6 +257,7 @@ function init() {
       initBannerParallax();
       initPillarHover();
       initProductHover();
+      initTeamHover();
     }
   );
 }
